@@ -1,0 +1,22 @@
+{
+  "name": "@hypereum/receipts-confirmations",
+  "version": "0.1.0",
+  "description": "W1-W3 outcome confirmation connectors (GitHub web-flow, DKIM/ARC, PEPPOL/SdI XMLDSig, CloudTrail, DSSE, Gitsign, TLSNotary zkTLS).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "node --test test/smoke.test.mjs",
+    "test": "node --test test/smoke.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.9.7",
+    "@noble/post-quantum": "^0.5.4",
+    "fast-xml-parser": "^5.2.5",
+    "xml-crypto": "^6.1.2"
+  }
+}

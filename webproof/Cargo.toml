@@ -1,0 +1,29 @@
+[package]
+name = "hv-webproof"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+publish = false
+description = "TLSNotary (tlsn) notary/prover/verifier for Hivemind Receipts W3 web-proof confirmations. Protocol code adapted from the tlsn attestation examples (MIT OR Apache-2.0); see NOTICE."
+
+# Direct dependency versions are pinned to the exact versions in the tlsn
+# upstream lockfile at the pinned revision, so this crate resolves against
+# the same crates the upstream examples were verified with.
+[dependencies]
+tlsn = { git = "https://github.com/tlsnotary/tlsn", rev = "24b10ba21bf36c3fd3de709e7eccd8308bb64207" }
+tlsn-formats = { git = "https://github.com/tlsnotary/tlsn", rev = "24b10ba21bf36c3fd3de709e7eccd8308bb64207" }
+anyhow = "=1.0.102"
+bincode = "=1.3.3"
+clap = { version = "=4.6.1", features = ["derive"] }
+futures = "=0.3.32"
+hex = "=0.4.3"
+http-body-util = "=0.1.3"
+hyper = { version = "=1.9.0", features = ["client", "http1"] }
+hyper-util = { version = "=0.1.20", features = ["full"] }
+k256 = { version = "=0.13.4", features = ["ecdsa"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+tokio = { version = "=1.52.1", features = ["rt", "rt-multi-thread", "macros", "net", "io-std", "fs", "io-util"] }
+tokio-util = { version = "=0.7.18", features = ["compat"] }
+tracing-subscriber = { version = "=0.3.23", features = ["env-filter"] }
