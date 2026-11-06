@@ -1,3 +1,5 @@
+> **Retired preview, not maintained.**
+
 # `receipts-confirmations`
 
 SPDX-License-Identifier: Apache-2.0
